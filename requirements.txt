@@ -1,0 +1,7 @@
+manim
+numpy
+Pillow
+matplotlib
+scipy
+pandas
+sympy
