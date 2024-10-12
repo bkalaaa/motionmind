@@ -1,18 +1,22 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { WavyBackground } from "../components/ui/wavy-background";
 import { LayoutGrid } from "../components/ui/layout-grid";
 import { useRouter } from "next/navigation";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "../components/ui/navbar-menu";
+import { cn } from "@/lib/utils";
+
 
 export default function Home() {
   const router = useRouter();
 
   const handleRedirect = () => {
-    router.push("/demo"); // Redirects to the demo page
+    router.push("/prompt"); // Redirects to the demo page
   };
 
   return (
+
     <div className="flex flex-col items-center">
       <WavyBackground className="max-w-4xl mx-auto pb-40">
         <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
@@ -28,18 +32,55 @@ export default function Home() {
           >
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              Border Magic
+              Start Prompting
             </span>
           </button>
         </div>
       </WavyBackground>
-
+      
       <div className="w-full">
         <LayoutGridDemo />
       </div>
     </div>
   );
 }
+
+// export function NavbarDemo() {
+//   return (
+//     <div className="relative w-full flex items-center justify-center">
+//       <Navbar className="top-2" />
+//       <p className="text-black dark:text-white">
+//       </p>
+//     </div>
+//   );
+// }
+
+// function Navbar({ className }: { className?: string }) {
+//   const [active, setActive] = useState<string | null>(null);
+//   return (
+//     <div
+//       className={cn("fixed top-4 inset-x-0 max-w-xs mx-auto z-50 h-10", className)}
+//     >
+//       <Menu setActive={setActive}>
+//         <MenuItem setActive={setActive} active={active} item="Get Started">
+//           <div className="flex flex-col space-y-2 text-sm p-2">
+//             <HoveredLink href="/web-dev">Get Started</HoveredLink>
+//             <HoveredLink href="/prompt">Prompt</HoveredLink>
+
+//           </div>
+//         </MenuItem>
+//         <MenuItem setActive={setActive} active={active} item="Pricing">
+//           <div className="flex flex-col space-y-2 text-sm p-2">
+//             <HoveredLink href="/hobby">Hobby</HoveredLink>
+//             <HoveredLink href="/individual">Individual</HoveredLink>
+//             <HoveredLink href="/team">Team</HoveredLink>
+//             <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+//           </div>
+//         </MenuItem>
+//       </Menu>
+//     </div>
+//   );
+// }
 
 export function LayoutGridDemo() {
   return (
