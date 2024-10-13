@@ -38,7 +38,7 @@ export function PlaceholdersAndVanishInputDemo() {
     const input = e.currentTarget.querySelector("input")?.value;
     if (input) {
       try {
-        const response = await fetch('/api/ask', {
+        const response = await fetch('/api/generate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
