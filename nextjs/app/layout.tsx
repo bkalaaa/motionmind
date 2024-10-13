@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <footer style={{ padding: '20px', backgroundColor: '#3b3b3b', color: '#fff' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: 'Arial, sans-serif', maxWidth: '1200px', margin: '0 auto' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: 'GeistMonoVF', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <Image
             src="/icons/motionlogo.png" // Replace with your icon path

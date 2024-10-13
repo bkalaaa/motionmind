@@ -26,7 +26,10 @@ export default function Home() {
 export function PlaceholdersAndVanishInputDemo({ setVideoSrc }) {
   const placeholders = [
     "What's the integral of sin^x?",
-    "Show pi on a graph?",
+    "Show a 3D plot of z = x^2 + y^2 over the range -2 to 2 for both axes.",
+    "Plot the function y = sin(x) from -2π to 2π.",
+    "Show the Pythagorean theorem with a right triangle and squares on each side.",
+    "Draw the Cartesian coordinate system with x and y axes labeled."
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -58,7 +61,7 @@ export function PlaceholdersAndVanishInputDemo({ setVideoSrc }) {
   return (
     <div className="h-[40rem] flex flex-col justify-center items-center px-4">
       <h2 className="mb-10 sm:mb-20 text-xl text-center font-bold sm:text-5xl dark:text-white text-white">
-        Ask Motion Mind Anything.
+        Ask MotionMind Anything.
       </h2>
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
