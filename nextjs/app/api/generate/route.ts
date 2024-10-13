@@ -41,7 +41,7 @@ export async function POST(request) {
 
       console.log(`\nAttempt ${attempts}: Generating code...`);
       const response = await openai.chat.completions.create({
-        model: 'gpt-4o',
+        model: process.env.FINE_TUNED_MODEL,
         messages: [
           { role: 'system', content: generalSystemPrompt },
           { role: 'user', content: question },

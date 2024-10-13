@@ -1,2 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/Users/rkala/Documents/VSCode/hackpsu/motionmind/nextjs/public/videos/manim_output_0h1zo33v/videos/temp_0h1zo33v/1080p60/partial_movie_files/GenScene/3977891868_592315595_223132457.mp4'
