@@ -8,7 +8,7 @@ MotionMind provides a personalized and inclusive learning experience using AI-po
 I built MotionMind with a robust tech stack, including Next.js for the frontend, Flask for the backend, and OpenAI's API for generating content. The AI models were fine-tuned using a JSONL dataset to create more accurate and tailored responses. Additionally, I used Manim and FFmpeg to generate animations based on user input, making the content visually engaging. Using Cerebras Inference, I enhanced the speed of our large language model, achieving performance benchmarks approximately 16 times faster than without this optimization.
 
 ## Challenges I ran into
--**AWS EC2**: One of the main challenges I encountered was setting up a smooth CI/CD pipeline on AWS EC2.
+- **AWS EC2**: One of the main challenges I encountered was setting up a smooth CI/CD pipeline on AWS EC2.
 - **Model Fine-Tuning**: Adjusting the AI model to handle specific queries for educational content was challenging, especially given token limitations and processing time.
 - **Rendering Animations**: Integrating Manim to generate real-time animations based on user queries posed technical challenges, particularly with ensuring smooth transitions and accurate representations.
 
