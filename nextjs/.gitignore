@@ -9,6 +9,8 @@
 # testing
 /coverage
 
+public/videos/
+
 # next.js
 /.next/
 /out/

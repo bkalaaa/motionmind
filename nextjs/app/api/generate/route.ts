@@ -15,6 +15,7 @@ You are an assistant that generates Manim code for animations. Please output cod
 1. Always use GenScene as the class name. 
 2. Use self.play() for animations.
 3. Only output the Python code, no explanations, and do not include code fences or markdown formatting.
+4. Always have from manim import * at the top of the code.
 `;
 
 // Function to generate a random alphanumeric string
@@ -41,7 +42,7 @@ export async function POST(request) {
 
       console.log(`\nAttempt ${attempts}: Generating code...`);
       const response = await openai.chat.completions.create({
-        model: process.env.FINE_TUNED_MODEL,
+        model: "gpt-4o",
         messages: [
           { role: 'system', content: generalSystemPrompt },
           { role: 'user', content: question },

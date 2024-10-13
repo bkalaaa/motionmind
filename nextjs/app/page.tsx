@@ -155,7 +155,7 @@ const cards = [
     id: 1,
     content: <SkeletonOne />,
     className: "col-span-2",
-    thumbnail: "/icons/NNj.jpg",
+    thumbnail: "/icons/kewl.png",
   },
   {
     id: 2,
@@ -167,7 +167,7 @@ const cards = [
     id: 3,
     content: <SkeletonThree />,
     className: "col-span-1",
-    thumbnail: "/icons/sincoswaves.png",
+    thumbnail: "/icons/sincoswave.png",
   },
   {
     id: 4,
