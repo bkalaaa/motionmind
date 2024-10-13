@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "ai": "^3.4.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
     "framer-motion": "^11.11.8",
     "lucide-react": "^0.452.0",
     "next": "14.2.15",
+    "openai": "^4.67.3",
     "react": "^18",
     "react-dom": "^18",
     "react-element-to-jsx-string": "^15.0.0",
