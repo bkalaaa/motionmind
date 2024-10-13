@@ -3,11 +3,18 @@ import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
 import { exec } from 'child_process';
+import Cerebras from '@cerebras/cerebras_cloud_sdk';
+
 
 require('dotenv').config();
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
+});
+
+
+const client = new Cerebras({
+  apiKey: process.env.CEREBRAS_API_KEY,
 });
 
 const generalSystemPrompt = `
@@ -41,8 +48,8 @@ export async function POST(request) {
       attempts += 1;
 
       console.log(`\nAttempt ${attempts}: Generating code...`);
-      const response = await openai.chat.completions.create({
-        model: "gpt-4o",
+      const response = await client.chat.completions.create({
+        model: "llama3.1-70b",
         messages: [
           { role: 'system', content: generalSystemPrompt },
           { role: 'user', content: question },
