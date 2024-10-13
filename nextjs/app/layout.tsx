@@ -15,7 +15,7 @@ const Footer = () => {
             alt="Icon"
           />
           <span style={{ fontSize: '0.9rem' }}>
-            &copy; {new Date().getFullYear()} Made by Brij Kalakheti
+            &copy; {new Date().getFullYear()} Made by Raj Kalakheti
           </span>
         </div>
         <p style={{ maxWidth: '500px', textAlign: 'right', fontSize: '0.85rem', margin: 0, lineHeight: '1.4' }}>

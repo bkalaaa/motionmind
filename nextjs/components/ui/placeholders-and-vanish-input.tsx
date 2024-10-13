@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-
+import Component from "./settings-dropdown";
 export function PlaceholdersAndVanishInput({
   placeholders,
   onChange,
@@ -175,6 +175,8 @@ export function PlaceholdersAndVanishInput({
     onSubmit && onSubmit(e);
   };
   return (
+    <div className="flex items-center justify-center w-full max-w-xl mx-auto">
+
     <form
       className={cn(
         "w-full relative max-w-xl mx-auto bg-white dark:bg-zinc-800 h-12 rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
@@ -242,7 +244,7 @@ export function PlaceholdersAndVanishInput({
           <path d="M13 6l6 6" />
         </motion.svg>
       </button>
-
+      
       <div className="absolute inset-0 flex items-center rounded-full pointer-events-none">
         <AnimatePresence mode="wait">
           {!value && (
@@ -272,5 +274,9 @@ export function PlaceholdersAndVanishInput({
         </AnimatePresence>
       </div>
     </form>
+    <div className="h-12 flex items-center justify-center bg-black dark:bg-zinc-800 rounded-r-full px-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+    <Component />
+  </div>
+</div>
   );
 }
