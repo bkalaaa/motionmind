@@ -1,29 +1,30 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
-import Link from 'next/link';
-
-const Header = () => {
-  return (
-    <header style={{ padding: '10px', backgroundColor: '#f4f4f4' }}>
-      <nav>
-        <Link href="/">Home</Link> | <Link href="/about">About</Link> | <Link href="/contact">Contact</Link>
-      </nav>
-    </header>
-  );
-};
-
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer style={{ padding: '10px', backgroundColor: '#f4f4f4', textAlign: 'center' }}>
-      <p>&copy; {new Date().getFullYear()} My Next.js App</p>
+    <footer style={{ padding: '20px', backgroundColor: '#3b3b3b', color: '#fff' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: 'Arial, sans-serif', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <Image
+            src="/icons/motionlogo.png" // Replace with your icon path
+            width={60} // Reduced width for cleaner layout
+            height={60} // Reduced height for cleaner layout
+            alt="Icon"
+          />
+          <span style={{ fontSize: '0.9rem' }}>
+            &copy; {new Date().getFullYear()} Made by Brij Kalakheti
+          </span>
+        </div>
+        <p style={{ maxWidth: '500px', textAlign: 'right', fontSize: '0.85rem', margin: 0, lineHeight: '1.4' }}>
+          Built with Next.js, serverless API routes, Tailwind CSS, Framer Motion, and OpenAI API, and deployed on Vercel.
+        </p>
+      </div>
     </footer>
   );
 };
-
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -47,10 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -1,4 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/Users/rkala/Documents/VSCode/hackpsu/motionmind/nextjs/videos/manim_output_6re797ro/videos/temp_6re797ro/1080p60/partial_movie_files/GenScene/3977891868_315148398_223132457.mp4'
-file 'file:/Users/rkala/Documents/VSCode/hackpsu/motionmind/nextjs/videos/manim_output_6re797ro/videos/temp_6re797ro/1080p60/partial_movie_files/GenScene/2852726489_955248347_4272345035.mp4'
-file 'file:/Users/rkala/Documents/VSCode/hackpsu/motionmind/nextjs/videos/manim_output_6re797ro/videos/temp_6re797ro/1080p60/partial_movie_files/GenScene/2852726489_70660636_4272345035.mp4'

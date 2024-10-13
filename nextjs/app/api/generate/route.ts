@@ -59,7 +59,7 @@ export async function POST(request) {
       const uniqueId = generateRandomString(8);
 
       // Create the videos directory if it doesn't exist
-      const videosDir = path.join(process.cwd(), 'videos');
+      const videosDir = path.join(process.cwd(), 'public', 'videos');
       if (!fs.existsSync(videosDir)) {
         fs.mkdirSync(videosDir);
       }
@@ -152,7 +152,7 @@ export async function POST(request) {
           fs.unlinkSync(tempPythonFile);
 
           // Return the path of the generated video
-          return NextResponse.json({ videoPath: outputVideoPath });
+          return NextResponse.json({ videoUrl: `/videos/manim_output_${uniqueId}/videos/temp_${uniqueId}/1080p60/output_${uniqueId}.mp4` });
         } else {
           console.error(`Video file not found at: ${outputVideoPath}`);
           fs.unlinkSync(tempPythonFile);

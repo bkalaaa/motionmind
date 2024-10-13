@@ -1,29 +1,29 @@
 "use client";
-
+import { useState } from "react";
 import { PlaceholdersAndVanishInput } from "../../components/ui/placeholders-and-vanish-input";
 import VideoPlayer from "../../components/ui/video-player";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../../components/ui/navbar-menu";
-import { useState } from "react";
 import { cn } from "@/lib/utils";
-
+import Image from "next/image";
 export default function Home() {
+  const [videoSrc, setVideoSrc] = useState("");
+
   return (
     <div>
       <div className="h-[40rem] flex flex-col justify-center items-center px-4 pt-4 -mt-10">
-        <PlaceholdersAndVanishInputDemo />
+        <PlaceholdersAndVanishInputDemo setVideoSrc={setVideoSrc} />
       </div>
       <div className="mt-16">
-        <VideoPlayer />
+        <VideoPlayer src={videoSrc} />
       </div>
       <div className="mt-16">
         <NavbarDemo />
+      </div>
     </div>
-  </div>
   );
 }
 
-
-export function PlaceholdersAndVanishInputDemo() {
+export function PlaceholdersAndVanishInputDemo({ setVideoSrc }) {
   const placeholders = [
     "What's the integral of sin^x?",
     "Show pi on a graph?",
@@ -48,6 +48,7 @@ export function PlaceholdersAndVanishInputDemo() {
 
         const data = await response.json();
         console.log('Response from serverless function:', data);
+        setVideoSrc(data.videoUrl); // Assuming the response contains the video URL as "videoUrl"
       } catch (error) {
         console.error('Error sending data:', error);
       }
@@ -56,7 +57,7 @@ export function PlaceholdersAndVanishInputDemo() {
   
   return (
     <div className="h-[40rem] flex flex-col justify-center items-center px-4">
-      <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-white">
+      <h2 className="mb-10 sm:mb-20 text-xl text-center font-bold sm:text-5xl dark:text-white text-white">
         Ask Motion Mind Anything.
       </h2>
       <PlaceholdersAndVanishInput
