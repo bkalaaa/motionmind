@@ -18,11 +18,11 @@ export default function Home() {
   return (
 
     <div className="flex flex-col items-center">
-      <WavyBackground className="max-w-4xl mx-auto pb-40">
-        <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+      <WavyBackground className="max-w-10xl mx-auto pb-40">
+        <p className="text-2xl md:text-20xl lg:text-7xl text-white font-bold inter-var text-center">
           MotionMind
         </p>
-        <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+        <p className="text-base md:text-lg mt-4 text-white font-bold inter-var text-center">
           Leverage the power of AI to create stunning animations.
         </p>
         <div className="flex justify-center mt-8">
