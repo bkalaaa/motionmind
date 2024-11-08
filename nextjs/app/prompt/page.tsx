@@ -41,7 +41,7 @@ export function PlaceholdersAndVanishInputDemo({ setVideoSrc }) {
     const input = e.currentTarget.querySelector("input")?.value;
     if (input) {
       try {
-        const response = await fetch('/api/generate', {
+        const response = await fetch('http://localhost:4000/api/generateVideo', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -51,7 +51,8 @@ export function PlaceholdersAndVanishInputDemo({ setVideoSrc }) {
 
         const data = await response.json();
         console.log('Response from serverless function:', data);
-        setVideoSrc(data.videoUrl); // Assuming the response contains the video URL as "videoUrl"
+        setVideoSrc(`http://localhost:4000${data.videoUrl}`); // Assuming the response contains the video URL as "videoUrl"
+        console.log('Video URL:', `http://localhost:4000${data.videoUrl}`);
       } catch (error) {
         console.error('Error sending data:', error);
       }

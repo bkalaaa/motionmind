@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@cerebras/cerebras_cloud_sdk": "^1.6.0"
+    "@cerebras/cerebras_cloud_sdk": "^1.6.0",
+    "express": "^4.21.1"
   }
 }
